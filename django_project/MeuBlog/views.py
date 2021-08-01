@@ -1,4 +1,3 @@
-from django_project.MeuBlog.models import Post
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
