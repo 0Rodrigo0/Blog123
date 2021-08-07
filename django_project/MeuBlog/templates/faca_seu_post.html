@@ -2,13 +2,20 @@
 {% block title %}Crie um novo Post! {% endblock %}
 {% block content %}
 
-<h1>Contribua com o Blog criando seu Post!!!</h1>
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p}}
-        <button class="btn btn-warning">Postar</button>
-</div>
+{% if user.is_authenticated %}
 
+    <h3>Contribua com o Blog criando seu Post!!!</h3>
+    </br></br>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button class="btn btn-warning">Postar</button>
+    </div>
+{% else %}
+
+<h3>Por favor entre com uma conta para editar ou faça seu cadastro!</h3>
+
+{% endif %}
 
 {% endblock %}
