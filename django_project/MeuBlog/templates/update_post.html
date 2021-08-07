@@ -5,16 +5,18 @@
 {% if user.is_authenticated %}
 
     <h3>Realiza modificações em seu Post!!!</h3>
-    </br></br>
+    </br>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p}}
+            {{ form.as_p }}
+            
             <button class="btn btn-warning">Postar</button>
     </div>
+
 {% else %}
 
-<h3>Por favor entre com uma conta para editar ou faça seu cadastro!</h3>
+    <h3>Por favor entre com uma conta para editar ou faça seu cadastro!</h3>
 
 {% endif %}
 
