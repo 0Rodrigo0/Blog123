@@ -3,16 +3,21 @@
 
 {% block content %}
 
-<h1>{{ post.title }}</h1>
-<small>By: 
-    {{ post.author.first_name }} 
-    {{ post.author.last_name }} - 
-    {{ post.post_date }} - 
-    <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-<str> ou </str>
-<a href="{% url 'delete_post' post.pk %}">(Apagar)</a></small><br/>
-<hr>
-<br/>
+    <h1>{{ post.title }} - {{ post.author.id }}</h1>
+    <small>By: 
+        {{ post.author.first_name }} 
+        {{ post.author.last_name }} - 
+        {{ post.post_date }} - 
+
+        {% if user.is_authenticated %}
+            {% if user.id == post.author.id %}
+                <a href="{% url 'update_post' post.pk %}">(Edit)</a>
+                <str> ou </str>
+                <a href="{% url 'delete_post' post.pk %}">(Apagar)</a></small><br/>
+            {% endif %}
+        {% endif %}
+    <hr>
+    <br/>
 {{ post.body }}
 
 
