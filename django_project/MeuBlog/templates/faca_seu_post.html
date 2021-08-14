@@ -12,6 +12,11 @@
             {{ form.as_p}}
             <button class="btn btn-warning">Postar</button>
     </div>
+
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("elder").value = name;
+    </script>
 {% else %}
 
 <h3>Por favor entre com uma conta para editar ou faça seu cadastro!</h3>

@@ -11,8 +11,7 @@
     <li><strong>Titulo:</strong><a href="{% url 'article-detail' post.pk %}">
         {{ post.title }}</a>
         <br> <strong>Categoria:</strong> <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
-        <br> <strong>Author:</strong> {{ post.author.first_name}} 
-        {{ post.author.last_name}}
+        <br> <strong>Author:</strong> {{ post.author }}
         <br> <strong>Postado em:</strong> {{ post.post_date }}
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
