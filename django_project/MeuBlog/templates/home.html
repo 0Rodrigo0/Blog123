@@ -17,9 +17,9 @@
             {% if user.id == post.author.id %}
             -  <a href="{% url 'update_post' post.pk %}">(Editar)</a>
                 <str> ou </str>
-                <a href="{% url 'delete_post' post.pk %}">(Apagar)</a> <br/>
-            {% endif %}
-        {% endif %}<br>
+                <a href="{% url 'delete_post' post.pk %}">(Apagar)</a>
+            {% endif %}<br/>
+        {% endif %}
     {{ post.snippet }}
     </li>
 <!--    
