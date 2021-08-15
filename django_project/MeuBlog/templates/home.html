@@ -19,8 +19,9 @@
                 <str> ou </str>
                 <a href="{% url 'delete_post' post.pk %}">(Apagar)</a> <br/>
             {% endif %}
-    {% endif %}
-    {{ post.snippet }}<br></li>
+        {% endif %}<br>
+    {{ post.snippet }}
+    </li>
 <!--    
     {{ post.body|slice:":200"|safe }}
 -->
