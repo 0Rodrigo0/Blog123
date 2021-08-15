@@ -18,7 +18,7 @@
         {% endif %}
     <hr>
     <br/>
-{{ post.body }}
+{{ post.body|safe }}
 
 
 <br/><br/>
@@ -43,6 +43,10 @@ Back</a>
         <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary disabled">Like</button>
         
     {% endif %} - {{ total_likes }} Likes
+<br></br>
+<br>
+<br>
+
 
 
 </form>
