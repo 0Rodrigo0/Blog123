@@ -39,7 +39,7 @@ Back</a>
         {% endif %}   
         
     {% else %}
-        <strong> Para curtir faça Login. </strong> <br/><br/>
+        <strong> Para curtir faça <a href="{% url 'login' %}">Login</a>. </strong> <br/><br/>
         <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary disabled">Like</button>
         
     {% endif %} - {{ total_likes }} Likes
