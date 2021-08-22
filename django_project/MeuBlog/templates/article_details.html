@@ -2,11 +2,45 @@
 {% block title %}{{ post.title_tag }}{% endblock %}
 
 {% block content %}
+    <div class="card mb-3">
+        <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name }}</h5>
+            <p class="card-text"> {{ user.profile.bio|slice:":200"|safe }}  ...</p>
+            <p class="text-muted">
+                {% if user.profile.website_url %}
+                <a href="{{ user.profile.website_url }}">Website</a>
+                {% endif %}
+
+                {% if user.profile.facebook_url %}
+                | <a href="{{ user.profile.facebook_url }}">Facebook</a>
+                {% endif %}
+
+                {% if user.profile.twitter_url %}
+                | <a href="{{ user.profile.twitter_url }}">Twitter</a>
+                {% endif %}
+
+                {% if user.profile.instagram_url %}
+                | <a href="{{ user.profile.instagram_url }}">Instagram</a>
+                {% endif %}
+
+                {% if user.profile.pinterest_url %}
+                | <a href="{{ user.profile.pinterest_url }}">Pinterest</a>
+                {% endif %}
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <h1>{{ post.title }}</h1>
-    <small>By: 
-        {{ post.author.first_name }} 
-        {{ post.author.last_name }} - 
+
+    
+    <small>Postado em: 
         {{ post.post_date }} - 
 
         {% if user.is_authenticated %}
@@ -52,8 +86,6 @@ Back</a>
 <br></br>
 <br>
 <br>
-
-
 
 </form>
 
