@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}{{ post.title_tag }}{% endblock %}
 
 {% block content %}
     <div class="card mb-3">
         <div class="row no-gutters">
         <div class="col-md-4">
-            <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start" alt="...">
+            
+            {% if post.author.profile.profile_pic.url %}
+                <img src="{{ post.author.profile.profile_pic.url }}" class="img-fluid rounded-start">
+            {% else %}
+                <img src="{% static 'MeuBlog/images/profile.jpg' %}" class="img-fluid rounded-start">
+            {% endif %}
+        
         </div>
         <div class="col-md-8">
             <div class="card-body">
             <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name }}</h5>
-            <p class="card-text"> {{ user.profile.bio|slice:":200"|safe }}  ...</p>
+            <p class="card-text"> {{ post.author.profile.bio|slice:":200"|safe }}  ...</p>
             <p class="text-muted">
                 {% if user.profile.website_url %}
                 <a href="{{ user.profile.website_url }}">Website</a>
