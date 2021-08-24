@@ -20,6 +20,8 @@
             <p class="card-text"> {{ post.author.profile.bio|slice:":200"|safe }}  ...</p>
             <p class="text-muted">
 
+                <a href="{% url 'show_proflie_page' post.author.profile.id %}">Página de Perfil</a>
+
                 {% if user.profile.website_url %}
                 | <a href="{{ user.profile.website_url }}">Website</a>
                 {% endif %}
