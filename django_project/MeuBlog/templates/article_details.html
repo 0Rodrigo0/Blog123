@@ -19,8 +19,9 @@
             <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name }}</h5>
             <p class="card-text"> {{ post.author.profile.bio|slice:":200"|safe }}  ...</p>
             <p class="text-muted">
+                
                 {% if user.profile.website_url %}
-                <a href="{{ user.profile.website_url }}">Website</a>
+                | <a href="{{ user.profile.website_url }}">Website</a>
                 {% endif %}
 
                 {% if user.profile.facebook_url %}
