@@ -7,6 +7,13 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic.detail import DetailView
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
 
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profile_page.html'
+    fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
+    success_url = reverse_lazy('home')
+
+
 class ShowProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
