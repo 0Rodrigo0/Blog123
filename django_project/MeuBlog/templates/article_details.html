@@ -50,7 +50,7 @@
     <h1>{{ post.title }}</h1>
 
     
-    <small>Postado em: 
+    <small><strong>Postado em:</strong> 
         {{ post.post_date }} - 
 
         {% if user.is_authenticated %}
@@ -71,45 +71,48 @@
 
 {{ post.body|safe }}
 
-<br/><br/>
+<br/>
 <a href="{% url 'home' %}" class="btn btn-warning">
 Back</a>
 
-<br/><br/>
 <br/>
-
+<br/>
+<hr>
 <form action="{% url 'like_post' post.pk %}" method="POST">
     {% csrf_token %}
-
     {% if user.is_authenticated %}    
         {% if liked %}
             <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">Unlike</button>
         {% else %}
             <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
-        {% endif %}   
-        
+        {% endif %}     
     {% else %}
-        <strong> Para curtir faça <a href="{% url 'login' %}">Login</a>. </strong> <br/><br/>
+        <strong> Para curtir faça <a href="{% url 'login' %}">Login</a>. </strong>
         <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary disabled">Like</button>
-        
     {% endif %} - {{ total_likes }} Likes
-<br></br>
-</br>
 <hr>
+</br>
 
-<h4>Comentários</h4>
+<h2><u>Comentários</u></h2>
+
+<br/>
 
 {% if not post.comments.all %}
-    Este Post ainda não tem comentários <a href='#'>Add seu comentário</a>
+    Este Post ainda não tem comentários <a href="{% url 'add_comments' post.pk %}">Faça um comentário</a>
 {% else %}
+
+    <a href="{% url 'add_comments' post.pk %}">Faça um comentário</a>
+</br>
+</br>
+
     {% for comment in post.comments.all %}
         <strong>
             {{ comment.name }} - 
             {{ comment.date_added }}
         </strong>
-        </br></br>
-        {{ comment.body }}
         </br>
+        {{ comment.body }}
+        </br></br>
     {% endfor %}
 {% endif %}
 <hr>

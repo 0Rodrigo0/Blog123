@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Página de Comentarios{% endblock %}
+{% block content %}
+
+
+    <h3>Faça um comentário</h3>
+    </br>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning">Comentar</button>
+    </div>
+
+
+{% endblock %}
