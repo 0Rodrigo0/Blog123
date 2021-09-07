@@ -46,7 +46,7 @@
         </div>
         </div>
     </div>
-
+    <hr>
     <h1>{{ post.title }}</h1>
 
     
@@ -60,7 +60,7 @@
                 <a href="{% url 'delete_post' post.pk %}">(Apagar)</a></small><br/>
             {% endif %}
         {% endif %}
-    <hr>
+    
     <br/>
 
 {% if post.header_image %}
@@ -68,8 +68,8 @@
 {% endif %}
 
 <br/><br/>
-{{ post.body|safe }}
 
+{{ post.body|safe }}
 
 <br/><br/>
 <a href="{% url 'home' %}" class="btn btn-warning">
@@ -77,7 +77,7 @@ Back</a>
 
 <br/><br/>
 <br/>
-<br/>
+
 <form action="{% url 'like_post' post.pk %}" method="POST">
     {% csrf_token %}
 
@@ -94,6 +94,25 @@ Back</a>
         
     {% endif %} - {{ total_likes }} Likes
 <br></br>
+</br>
+<hr>
+
+<h4>Comentários</h4>
+
+{% if not post.comments.all %}
+    Este Post ainda não tem comentários <a href='#'>Add seu comentário</a>
+{% else %}
+    {% for comment in post.comments.all %}
+        <strong>
+            {{ comment.name }} - 
+            {{ comment.date_added }}
+        </strong>
+        </br></br>
+        {{ comment.body }}
+        </br>
+    {% endfor %}
+{% endif %}
+<hr>
 <br>
 <br>
 
