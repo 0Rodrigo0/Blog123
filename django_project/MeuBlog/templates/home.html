@@ -2,8 +2,24 @@
 
 {% block content %}
 
+<h2><strong>Olá, sejam bem vindos ao MeuBlog!!!</strong></h2><br>
 
-<h1>Posts</h1>
+<table>
+    <tr>
+    <td><img height="200" src="https://www.significadofacil.com/wp-content/uploads/2019/06/wtf-capa.jpg"></td>
+    <td><h5>
+        <p align ="justify">Este é um Blog experimental para praticar as funcionalidade do Django.
+                            Se vocês puderem utilizar o Blog para testes seria bem legal.</br>
+                            Caso encontrem erros criem um post com a categoria "Achei um erro..." que vou verificar
+                            para tentar corrigir.</br>
+                            Você pode criar um perfil, criar posts, curtir, comentar e criar uma pagina de perfil...</br></br>
+                            Obrigado!!</p>
+        
+    </h5></td>
+    </tr>
+</table>
+<br><br>
+<h2>Posts</h2>
 
 <ul>
 {% for post in object_list %}
