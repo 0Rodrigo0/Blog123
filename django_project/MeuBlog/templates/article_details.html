@@ -57,8 +57,8 @@
     <h1>{{ post.title }}</h1>
     
     <small><strong>Postado em:</strong> 
-        {{ post.post_date }} - 
-
+        {{ post.post_date }}  
+        <br/>
         {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
                 <a href="{% url 'update_post' post.pk %}">(Edit)</a>
