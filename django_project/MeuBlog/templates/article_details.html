@@ -3,6 +3,7 @@
 {% block title %}{{ post.title_tag }}{% endblock %}
 
 {% block content %}
+{% if user.profile.page %}
     <div class="card mb-3">
         <div class="row no-gutters">
         <div class="col-md-4">
@@ -48,7 +49,12 @@
     </div>
     <hr>
     <h1>{{ post.title }}</h1>
-
+{% else %}
+    <strong>Aqui você pode mostrar seu perfil.
+        Para criar um perfil clique <a href="{% url 'create_profile_page' %}">aqui</a>
+    </strong>
+</br></br>
+{% endif %}
     
     <small><strong>Postado em:</strong> 
         {{ post.post_date }} - 
