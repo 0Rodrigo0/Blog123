@@ -2,22 +2,46 @@
 
 {% block content %}
 
-<h2><strong>Olá, sejam bem vindos ao MeuBlog!!!</strong></h2><br>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://wallpapercave.com/wp/wp3105538.jpg" width="100%" height="500x200" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Bem Vindos</h4>
+          <p>Obrigado por acessar o Blog!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://fabiocamara.eti.br/wp-content/uploads/2019/06/pljxaxmkio021.jpg" width="100%" height="500x200" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Python e Django</h4>
+          <p>Este Blog utiliza Python e Django.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2019/02/27165123/DJANGO-HEROKU.png" width="100%" height="500x200" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Heroku</h4>
+          <p>Para a publicação foi utilizado o maravilhoso Heroku.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-<table>
-    <tr>
-    <td><img height="200" src="https://www.significadofacil.com/wp-content/uploads/2019/06/wtf-capa.jpg"></td>
-    <td><h5>
-        <p align ="justify">Este é um Blog experimental para praticar as funcionalidade do Django.
-                            Se vocês puderem utilizar o Blog para testes seria bem legal.</br>
-                            Caso encontrem erros criem um post com a categoria "Achei um erro..." que vou verificar
-                            para tentar corrigir.</br>
-                            Você pode criar um perfil, criar posts, curtir, comentar e criar uma pagina de perfil...</br></br>
-                            Obrigado!!</p>
-        
-    </h5></td>
-    </tr>
-</table>
+
 <br><br>
 <h2>Posts</h2>
 
@@ -43,6 +67,6 @@
 -->
 {% endfor%}
 </ul>
-
-
+</br></br>
+</br>
 {% endblock %}
