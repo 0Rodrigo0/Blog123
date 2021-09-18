@@ -23,31 +23,31 @@
             <p class="text-muted">
 
                 {% if page_user.website_url %}
-                <a href="{{ page_user.website_url }}">Website</a> |
+                <a href="{{ page_user.website_url }}">Website</a>
                 {% endif %}
 
                 {% if page_user.facebook_url %}
-                <a href="{{ page_user.facebook_url }}">Facebook</a> |
+                | <a href="{{ page_user.facebook_url }}">Facebook</a>
                 {% endif %}
 
                 {% if page_user.twitter_url %}
-                <a href="{{ page_user.twitter_url }}">Twitter</a> |
+                | <a href="{{ page_user.twitter_url }}">Twitter</a>
                 {% endif %}
 
                 {% if page_user.instagram_url %}
-                <a href="{{ page_user.instagram_url }}">Instagram</a> |
+                | <a href="{{ page_user.instagram_url }}">Instagram</a>
                 {% endif %}
 
                 {% if page_user.pinterest_url %}
-                <a href="{{ page_user.pinterest_url }}">Pinterest</a> |
+                | <a href="{{ page_user.pinterest_url }}">Pinterest</a>
                 {% endif %}
 
                 {% if user.profile.github_url %}
-                <a href="{{ user.profile.github_url }}">GitHub</a> |
+                | <a href="{{ user.profile.github_url }}">GitHub</a>
                 {% endif %}
                 
                 {% if user.profile.linkedin_url %}
-                <a href="{{ user.profile.linkedin_url }}">Linkedin</a>
+                | <a href="{{ user.profile.linkedin_url }}">Linkedin</a>
                 {% endif %}
             </p>
         </div>
