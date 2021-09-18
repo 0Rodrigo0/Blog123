@@ -42,6 +42,14 @@
                 {% if user.profile.pinterest_url %}
                 | <a href="{{ user.profile.pinterest_url }}">Pinterest</a>
                 {% endif %}
+
+                {% if user.profile.github_url %}
+                | <a href="{{ user.profile.github_url }}">GitHub</a>
+                {% endif %}
+                
+                {% if user.profile.linkedin_url %}
+                | <a href="{{ user.profile.linkedin_url }}">Linkedin</a>
+                {% endif %}
             </p>
             </div>
         </div>

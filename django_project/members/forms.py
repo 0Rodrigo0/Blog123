@@ -8,7 +8,7 @@ class ProfilePageForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url']
+        fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url', 'pinterest_url', 'github_url', 'linkedin_url']
         
         widgets = {
             'bio' : forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Bio'}),
@@ -18,6 +18,8 @@ class ProfilePageForm(forms.ModelForm):
             'twitter_url' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Twitter'}),
             'instagram_url' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Instagram'}),
             'pinterest_url' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Pinterest'}),
+            'github_url' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'GitHub'}),
+            'linkedin_url' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Linkedin'}),
     }
 
 class SignUpForm(UserCreationForm):
