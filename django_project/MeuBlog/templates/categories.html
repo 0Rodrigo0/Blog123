@@ -8,18 +8,19 @@
 
     <ul>
         {% for post in category_posts %}
-             
-            <li><a href="{% url 'article-detail' post.pk %}">
-                {{ post.title }}</a>
-                <br> <strong>Categoria:</strong> {{ post.category }}
-                <br> <strong>Author:</strong> {{ post.author.first_name }} {{ post.author.last_name }}
-                <br> <strong>Postado em:</strong> {{ post.post_date }}
+            <li><strong>Titulo:</strong><a href="{% url 'article-detail' post.pk %}">
+                {{ post.title }}</a> - 
+                <strong>Categoria:</strong> <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
+                <br> <strong>Author:</strong> {{ post.author.first_name }} {{ post.author.last_name }} - 
+                <strong>Postado em:</strong> {{ post.post_date }}
                 {% if user.is_authenticated %}
-                -   <a href="{% url 'update_post' post.pk %}">(Editar)</a>
-                    <str> ou </str>
-                    <a href="{% url 'delete_post' post.pk %}">(Apagar)</a> <br/>
+                    {% if user.id == post.author.id %}
+                    -  <a href="{% url 'update_post' post.pk %}">(Editar)</a>
+                        <str> ou </str>
+                        <a href="{% url 'delete_post' post.pk %}">(Apagar)</a>
+                    {% endif %}<br/>
                 {% endif %}
-            {{ post.body }}<br>
+            {{ post.snippet }}
             </li>
         {% endfor %}
     </ul>
