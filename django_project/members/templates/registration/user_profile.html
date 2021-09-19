@@ -23,7 +23,7 @@
             <p class="text-muted">
 
                 {% if page_user.website_url %}
-                <a href="{{ page_user.website_url }}">Website</a>
+                | <a href="{{ page_user.website_url }}">Website</a>
                 {% endif %}
 
                 {% if page_user.facebook_url %}
@@ -42,12 +42,12 @@
                 | <a href="{{ page_user.pinterest_url }}">Pinterest</a>
                 {% endif %}
 
-                {% if user.profile.github_url %}
-                | <a href="{{ user.profile.github_url }}">GitHub</a>
+                {% if page_user.github_url %}
+                | <a href="{{ page_user.github_url }}">GitHUb</a>
                 {% endif %}
                 
-                {% if user.profile.linkedin_url %}
-                | <a href="{{ user.profile.linkedin_url }}">Linkedin</a>
+                {% if page_user.linkedin_url %}
+                | <a href="{{ page_user.linkedin_url }}">LinkedIn</a>
                 {% endif %}
             </p>
         </div>
