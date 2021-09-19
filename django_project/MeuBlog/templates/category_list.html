@@ -2,13 +2,14 @@
 {% block title %} Categorias do Blog {% endblock %}
 
 {% block content %}
-<h5>
+<h6>
 <i>
     <h4>Categorias do Blog</h4>
 
         {% for item in cat_menu_list %}
-            <a class="dropdown-item" href="{% url 'category' item|slugify %}"> {{ item }}</a>
+            </br>
+            <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a>
         {% endfor %}
-</h5>
+</h6>
 </i>
 {% endblock %}

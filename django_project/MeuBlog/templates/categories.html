@@ -4,8 +4,9 @@
 
 {%  if category_posts %}
 
-    <h1>{{ cats }}</h1>
-<h5>
+<h1>{{ cats }}</h1>
+</br></br>
+<h6>
 <i>
     <ul>
         {% for post in category_posts %}
@@ -22,12 +23,14 @@
                     {% endif %}<br/>
                 {% endif %}
             {{ post.snippet }}
+            </br></br>
             </li>
         {% endfor %}
     </ul>
 {% else %}
     <h4>Deslcupa mas esta categoria não existe!</h4>
 {% endif %}
-</h5>
+</h6>
 </i>
+
 {% endblock %}

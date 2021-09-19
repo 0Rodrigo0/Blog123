@@ -63,7 +63,7 @@
 {% endif %}
     <hr>
     <h1>{{ post.title }}</h1>
-    <h5>
+    <h6>
     <i>
     <small><strong>Postado em:</strong> 
         {{ post.post_date }}  
@@ -77,7 +77,7 @@
         {% endif %}
     
     <br/>
-    </h5>
+    </h6>
     </i>
 {% if post.header_image %}
     <img src="{{ post.header_image.url }}" width="100%" class="d-block w-100">
