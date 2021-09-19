@@ -63,7 +63,8 @@
 {% endif %}
     <hr>
     <h1>{{ post.title }}</h1>
-    
+    <h5>
+    <i>
     <small><strong>Postado em:</strong> 
         {{ post.post_date }}  
         <br/>
@@ -76,14 +77,19 @@
         {% endif %}
     
     <br/>
-
+    </h5>
+    </i>
 {% if post.header_image %}
     <img src="{{ post.header_image.url }}" width="100%" class="d-block w-100">
 {% endif %}
 
 <br/><br/>
 
-{{ post.body|safe }}
+<h5>
+<i>
+<a   >{{ post.body|safe }}</a>
+</i>
+</h5>
 
 <br/>
 <a href="{% url 'home' %}" class="btn btn-warning">

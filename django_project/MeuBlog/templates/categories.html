@@ -5,7 +5,8 @@
 {%  if category_posts %}
 
     <h1>{{ cats }}</h1>
-
+<h5>
+<i>
     <ul>
         {% for post in category_posts %}
             <li><strong>Titulo:</strong><a href="{% url 'article-detail' post.pk %}">
@@ -27,5 +28,6 @@
 {% else %}
     <h4>Deslcupa mas esta categoria não existe!</h4>
 {% endif %}
-
+</h5>
+</i>
 {% endblock %}
