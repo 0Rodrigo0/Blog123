@@ -45,36 +45,47 @@
 
 {% block content %}
 
-
-
 <br>
-<h2>Postagens recentes</h2>
+<h3>Recentes</h3>
 
 <h6>
-<i>
-<ul>
 {% for post in object_list %}
+<br>
+<hr>
     <br> 
-    <li><strong>Titulo:</strong><a href="{% url 'article-detail' post.pk %}">
-        {{ post.title }}</a> - 
-        <strong>Categoria:</strong> <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
-        <br> <strong>Author:</strong> {{ post.author.first_name }} {{ post.author.last_name }} - 
-        <strong>Postado em:</strong> {{ post.post_date }}
-        {% if user.is_authenticated %}
-            {% if user.id == post.author.id %}
-            -  <a href="{% url 'update_post' post.pk %}">(Editar)</a>
-                <str> ou </str>
-                <a href="{% url 'delete_post' post.pk %}">(Apagar)</a>
-            {% endif %}<br/>
-        {% endif %}
-    {{ post.snippet }}
-    </li>
+    <div class="card mb-3" style="max-width: 100%;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ post.header_image.url }}" class="img-fluid rounded-start" width="400px" height=200px>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-justify">
+              <h3><a href="{% url 'article-detail' post.pk %}" style="text-decoration:none">
+              {{ post.title }}</a></h3> 
+              {{ post.snippet }} </br>
+              <a href="{% url 'category' post.category|slugify %}" style="text-decoration:none">{{ post.category }}</a>
+              <br> Por: {{ post.author.first_name }} {{ post.author.last_name }} </br>
+              <strong>Em:</strong> {{ post.post_date }}
+              {% if user.is_authenticated %}
+                  {% if user.id == post.author.id %}
+                  -  <a href="{% url 'update_post' post.pk %}" style="text-decoration:none">(Editar)</a>
+                      <str> ou </str>
+                      <a href="{% url 'delete_post' post.pk %}" style="text-decoration:none">(Apagar)</a>
+                  {% endif %}
+              {% endif %}
+              
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
 <!--    
     {{ post.body|slice:":200"|safe }}
 -->
 {% endfor%}
-</ul>
-</i>
+
 </h6>
 </br></br>
 </br>
