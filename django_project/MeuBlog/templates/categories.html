@@ -6,31 +6,18 @@
 
 <h1>{{ cats }}</h1>
 </br></br>
-<h6>
-<i>
-    <ul>
-        {% for post in category_posts %}
-            <li><strong>Titulo:</strong><a href="{% url 'article-detail' post.pk %}">
-                {{ post.title }}</a> - 
-                <strong>Categoria:</strong> <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
-                <br> <strong>Author:</strong> {{ post.author.first_name }} {{ post.author.last_name }} - 
-                <strong>Postado em:</strong> {{ post.post_date }}
-                {% if user.is_authenticated %}
-                    {% if user.id == post.author.id %}
-                    -  <a href="{% url 'update_post' post.pk %}">(Editar)</a>
-                        <str> ou </str>
-                        <a href="{% url 'delete_post' post.pk %}">(Apagar)</a>
-                    {% endif %}<br/>
-                {% endif %}
-            {{ post.snippet }}
-            </br></br>
-            </li>
-        {% endfor %}
-    </ul>
+
+<div class='container'>
+    {% for post in category_posts %}
+    {% include 'cards.html' with instance=post %}
+      <a href="{% url 'article-detail' post.pk %}">{{ obj.title }}</a><br/>
+    {% endfor %}
+
+
+</div> 
 {% else %}
     <h4>Deslcupa mas esta categoria não existe!</h4>
 {% endif %}
-</h6>
-</i>
+
 
 {% endblock %}

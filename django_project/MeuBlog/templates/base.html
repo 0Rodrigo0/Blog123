@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,15 +11,18 @@
     <title>{% block title %} Meu Blog {% endblock %}</title>
   </head>
   
-  <style>
+
+
+  <!-----------    Background da página   --------------->
+    <style>
     body {
       background: url('https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') center/cover;
       background-attachment: fixed;
-      
     }
-  </style>
+    </style>
 
-  
+
+  <!-----------   Barra de navegação da página    --------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'home' %}">Blog Python + Django.</a>
@@ -128,7 +131,7 @@
       </nav>
 
 
-
+  
     <br/>
     <div class="container" >
         {% block content %}
