@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <body>
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
@@ -48,45 +49,39 @@
 <br>
 <h3>Recentes</h3>
 
-<h6>
 {% for post in object_list %}
 <br>
-<hr>
-    <br> 
-    <div class="card mb-3" style="max-width: 100%;">
+    <div class="card mb-3" style="box-shadow: 0px 2px 23px black; font-family: Arial;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="{{ post.header_image.url }}" class="img-fluid rounded-start" width="400px" height=200px>
+          <img src="{{ post.header_image.url }}" class="img-fluid rounded" style="display: flex; justify-content: center; height: 35vh ;">
         </div>
         <div class="col-md-8">
-          <div class="card-body text-justify">
-              <h3><a href="{% url 'article-detail' post.pk %}" style="text-decoration:none">
-              {{ post.title }}</a></h3> 
-              {{ post.snippet }} </br>
-              <a href="{% url 'category' post.category|slugify %}" style="text-decoration:none">{{ post.category }}</a>
-              <br> Por: {{ post.author.first_name }} {{ post.author.last_name }} </br>
-              <strong>Em:</strong> {{ post.post_date }}
+          <div class="card-body">
+              <a href="{% url 'article-detail' post.pk %}" style="text-decoration:none; font-size: 150%; color: black;">
+              {{ post.title }}</a>
+              <a href="{% url 'category' post.category|slugify %}" style="text-decoration:none; color: grey; font-size: 100%;"> - {{ post.category }}</a>
+              </br></br>
+              {{ post.snippet }}
+              </br>
+              <br> Por: {{ post.author.first_name }} {{ post.author.last_name }} - 
+              {{ post.post_date }}
               {% if user.is_authenticated %}
                   {% if user.id == post.author.id %}
                   -  <a href="{% url 'update_post' post.pk %}" style="text-decoration:none">(Editar)</a>
                       <str> ou </str>
                       <a href="{% url 'delete_post' post.pk %}" style="text-decoration:none">(Apagar)</a>
                   {% endif %}
-              {% endif %}
-              
-          
-            
+              {% endif %}                    
           </div>
         </div>
       </div>
     </div>
-    
+<br>
 <!--    
     {{ post.body|slice:":200"|safe }}
 -->
 {% endfor%}
-
-</h6>
 </br></br>
 </br>
 {% endblock %}
