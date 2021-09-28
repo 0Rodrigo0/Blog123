@@ -4,20 +4,23 @@
 
 {%  if category_posts %}
 
-<h1>{{ cats }}</h1>
-</br></br>
+  <h1>{{ cats }}</h1>
+  </br></br>
 
-<div class='container'>
-    {% for post in category_posts %}
-    {% include 'cards.html' with instance=post %}
-      <a href="{% url 'article-detail' post.pk %}">{{ obj.title }}</a><br/>
-    {% endfor %}
-
-
-</div> 
+  <hr>
+  <div class='container'>
+    <div class="row">
+      {% for post in category_posts %}
+        <div class="col">
+          {% include 'cards.html' with instance=post %}
+          <a href="{% url 'article-detail' post.pk %}">{{ obj.title }}</a><br/>
+        </div>
+      {% endfor %}        
+    </div>
+  </div> 
 {% else %}
     <h4>Deslcupa mas esta categoria não existe!</h4>
 {% endif %}
-
-
+<hr>
+</br></br>
 {% endblock %}

@@ -3,7 +3,7 @@
 
 {% block content %}
 <h6>
-<i>
+
     <h4>Categorias do Blog</h4>
 
         {% for item in cat_menu_list %}
@@ -11,5 +11,6 @@
             <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a>
         {% endfor %}
 </h6>
-</i>
+</br></br></br></br></br></br></br></br></br>
+
 {% endblock %}

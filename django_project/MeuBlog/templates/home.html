@@ -2,7 +2,6 @@
 <html lang="en">
 
 <!----------     Carrossel      ---------------->
-
 <body>
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
@@ -52,17 +51,16 @@
 <h3>Recentes</h3>
 
 
+<!--------   Card Home   ---------->
+<hr>
 <div class='container'>
-  {% for post in object_list %}
-  {% include 'cards.html' with instance=post %}
-    <a href="{% url 'article-detail' post.pk %}">{{ obj.title }}</a><br/>
-    
+  <div class="row">
+    {% for post in object_list %}
+      <div class="col">
+        {% include 'cards.html' with instance=post %}
+        <a href="{% url 'article-detail' post.pk %}">{{ obj.title }}</a><br/>
+      </div></br>
 
-
-
-
-
-  <br>
   <!--
       <div class="card mb-3" style="box-shadow: 0px 2px 23px black; font-family: Arial;">
         <div class="row g-0">
@@ -95,11 +93,24 @@
       {{ post.body|slice:":200"|safe }}
   -->
 
-
-  {% endfor%}
+    {% endfor%}
   </div>
 </div>
+<hr>
 
-</br></br>
-</br>
+
+
+
+
+<!-- wpp-btn-mobile -->
+<div class="phone-call cbh-phone cbh-green cbh-show  cbh-static" id="clbh_phone_div" style="">
+  <a id="WhatsApp-button" href="https://wa.me/5551984065069" target="_blank" class="phoneJs" title="WhatsApp 360imagem">
+    <div class="cbh-ph-circle"></div>
+    <div class="cbh-ph-circle-fill"></div>
+    <div class="cbh-ph-img-circle1"></div>
+  </a>
+</div>
+<!-- wpp-btn-mobile -->
+
 {% endblock %}
+
