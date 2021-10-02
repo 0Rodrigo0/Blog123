@@ -1,21 +1,22 @@
 
 <!doctype html>
 <html lang="en">
-
+<head>
+  <meta charset="utf-8">
 <!--------      Favicon     --------->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/MeuBlog/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/MeuBlog/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/MeuBlog/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="/static/MeuBlog/Favicon/site.webmanifest">
-    <link rel="mask-icon" href="/static/MeuBlog/Favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/static/MeuBlog/Favicon/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/MeuBlog/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/MeuBlog/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/MeuBlog/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/MeuBlog/Favicon/site.webmanifest">
+  <link rel="mask-icon" href="/static/MeuBlog/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/static/MeuBlog/Favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  </head>
 <!----------     Carrossel      ---------------->
 <body>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -23,21 +24,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="100% 100%" height="640x1024" alt="...">
+        <img class="d-block w-100" src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="100% 100%" height="640" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1>Olá, sejam bem vindos!</h1>
           <p><h4>Obrigado por acessar o Blog!</h4></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://images.pexels.com/photos/290470/pexels-photo-290470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="100% 100%" height="640x1024" alt="...">
+        <img src="https://images.pexels.com/photos/290470/pexels-photo-290470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="100% 100%" height="640" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1>Python + Django</h1>
           <p><h4>Foram usados para o desenvolvimento.</h4></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://images.pexels.com/photos/3162989/pexels-photo-3162989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="100% 100%" height="640x1024" alt="Que isso">
+        <img src="https://images.pexels.com/photos/3162989/pexels-photo-3162989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"  width="100% 100%" height="640" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1>Heroku</h1>
           <p><h4>Este site está rodando na plataforma Heroku.</h4></p>
@@ -110,11 +111,4 @@
 </div>
 <hr>
 
-
-
-
-
-
-
 {% endblock %}
-

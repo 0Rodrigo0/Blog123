@@ -3,7 +3,7 @@
 
 <!--------    Cards das páginas    ------------->
 
-<div class="card" style="width: 18rem; box-shadow: 0px 2px 23px black; font-family: Arial;">
+<div class="card1" style="width: 18rem; box-shadow: 0px 2px 23px black; font-family: Arial;">
     {% if  post.header_image.url  %}
         <a href="{% url 'article-detail' post.pk %}">
             <img src="{{ post.header_image.url }}" class="card-img-top" style="height: 100% 100%;">
@@ -20,7 +20,7 @@
                     <str> ou </str>
                     <a href="{% url 'delete_post' post.pk %}" style="text-decoration:none; font-family: Arial; color: grey;">Apagar</a>
                   {% endif %}
-              {% endif %}</br></br>      
+        {% endif %}</br></br>      
         <a href="{% url 'category' post.category|slugify %}" class="btn btn-primary">{{ post.category }}</a><br></br>
         <div class="card-footer">
             <small class="text-muted">
