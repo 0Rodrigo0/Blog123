@@ -6,8 +6,8 @@
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
-    <!--{{ form.as_p}} -->
-    <div class="form-group">
+        {{ form.as_p}}
+   <!-- <div class="form-group">
         <label class="form-label">Usuário</label>
         <input type="text" class="form-control" name="username" placeholder="Usuário...">
         <div class="form-text">Insira seu nome de usuário</div>
@@ -19,6 +19,7 @@
         <div class="form-text">Insira sua senha</div>
     </div>
 </br>
+-->
     <button class="btn btn-warning">Login</button>
 </div>
 </br>
