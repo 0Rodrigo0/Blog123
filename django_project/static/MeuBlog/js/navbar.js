@@ -3,8 +3,7 @@ $('.nav__toggle-btn').click(function () {
     console.log("Clicked menu button");
     $("#mainListDiv").toggleClass("nav__wrapper--visible");
     $("#mainListDiv").fadeIn();
-
-});
+        });
 
 $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
