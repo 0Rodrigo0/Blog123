@@ -52,7 +52,7 @@ body {
 @-webkit-keyframes arrow-movement {
   0% {
     opacity: 0;
-    top: 72%;
+    top: 73%;
   }
   70% {
     opacity: 1;
@@ -65,7 +65,7 @@ body {
 @keyframes arrow-movement {
   0% {
     opacity: 0;
-    top: 72%;
+    top: 73%;
   }
   70% {
     opacity: 1;
