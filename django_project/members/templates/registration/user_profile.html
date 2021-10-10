@@ -9,11 +9,10 @@
 <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col-md-4">
-            
             {% if page_user.profile_pic %}
-                <img src="{{ page_user.profile_pic.url }}" class="img-fluid rounded-start">
+                <img src="{{ page_user.profile_pic.url }}" class="img-fluid rounded-start" style="max-width: 100% 100%;" >
             {% else %}
-                <img src="{% static 'MeuBlog/images/profile.jpg' %}" class="img-fluid rounded-start">
+                <img src="{% static 'MeuBlog/images/profile.jpg' %}" class="img-fluid rounded-start" style="max-width: 100% 100%;">
             {% endif %}
         </div>
         <div class="col-md-8">
