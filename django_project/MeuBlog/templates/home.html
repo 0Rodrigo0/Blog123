@@ -3,19 +3,92 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h3>Noticas</h3>
+</br>
+<h3>Tecnologias</h3>
+<p class="fs-6 text-grey">Clique nas imagens e confira as tecnologias utilizadas.</p>
 <hr>
+<div class="containernt d-flex align-items-center justify-content-center flex-wrap">
+  <div class="box">
+      <div class="body">
+          <div class="imgContainer"> <img src="https://images.hdqwalls.com/download/python-logo-4k-i6-2560x1080.jpg" alt=""> </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">Python</h3>
+                  <p class="fs-6 text-white">Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="box">
+    <div class="body">
+        <div class="imgContainer"> <img src="https://www.teahub.io/photos/full/292-2920011_django-developer.png" alt=""> </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <h3 class="text-white fs-5">Django</h3>
+                <p class="fs-6 text-white">Django é um framework para desenvolvimento rápido para web, escrito em Python, que utiliza o padrão model-template-view. Foi criado originalmente como sistema para gerenciar um site jornalístico na cidade de Lawrence, no Kansas.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="body">
+        <div class="imgContainer"> <img src="https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg" alt=""> </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <h3 class="text-white fs-5">HTML 5</h3>
+                <p class="fs-6 text-white">HTML5 é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software. É a quinta versão da linguagem HTML.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="body">
+        <div class="imgContainer"> <img src="https://blog.kakaocdn.net/dn/ctL2TZ/btqBRwWjTTH/Dh8bcJtAxhL8M20xOftZi1/img.png" alt=""> </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <h3 class="text-white fs-5">Heroku</h3>
+                <p class="fs-6 text-white">Heroku é uma plataforma em nuvem como um serviço que suporta várias linguagens de programação. Uma das primeiras plataformas em nuvem, o Heroku está em desenvolvimento desde junho de 2007.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="body">
+        <div class="imgContainer"> <img src="https://i0.wp.com/www.cupcom.com.br/wp-content/uploads/2020/04/site-css-sbg-1.jpg?fit=1024%2C576&ssl=1" alt=""> </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <h3 class="text-white fs-5">Css</h3>
+                <p class="fs-6 text-white">Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web. O código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags "style". Também é possível, em vez de colocar a formatação dentro do documento, criar um link para um arquivo CSS que contém os estilos.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="body">
+        <div class="imgContainer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx5AOqGbXBBTQz6UvV-MTnC0aJdxWMz6hhHw&usqp=CAU" alt=""> </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+            <div>
+                <h3 class="text-white fs-5">Scss</h3>
+                <p class="fs-6 text-white">Sass é a linguagem de extensão CSS DE nível profissional mais madura, estável e poderosa  do mundo.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</br>
+</br>
 
 
+<h3>Notícas em destaque</h3>
+<hr>
 <div class="containercn">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-md-4">
       <div class="cardnoticias p-0">
         <div class="cardnoticias-image"> <img src="https://img.r7.com/images/r7rio-042021-vacina-rio-13042021212435848?dimensions=299x417&&&&&&&&&&resize=299x417&crop=631x880+287+0" alt=""> </div>
           <div class="cardnoticias-content d-flex flex-column align-items-center">
             <h4 class="pt-2">Brasil tem a menor taxa de transmissão do coronavírus desde abril de 2020</h4>
-            <h5>Saúde</h5>
+            <a href="https://br.noticias.yahoo.com/brasil-tem-a-menor-taxa-de-transmissao-do-coronavirus-desde-abril-de-2020-173106992.html" style="color: white;"><h5>Saúde</h5></a>
             <ul class="social-icons d-flex justify-content-center">
                   <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
                   <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
@@ -24,12 +97,41 @@
           </div>
         </div>
       </div>
-    </div>
-</div>
+      <div class="col-md-4">
+        <div class="cardnoticias p-0">
+          <div class="cardnoticias-image"> <img src="https://t.ctcdn.com.br/6cH4spSG2O5lgK6FQMc5F-CwElM=/400x400/smart/i490767.jpeg" alt=""> </div>
+            <div class="cardnoticias-content d-flex flex-column align-items-center">
+              <h4 class="pt-2">Senadora norte-americana pede que CEO do Facebook retenha documentos relacionados a depoimento</h4>
+              <a href="https://br.investing.com/news/stock-market-news/senadora-norteamericana-pede-que-ceo-do-facebook-retenha-documentos-relacionados-a-depoimento-927728" style="color: white;"><h5>Tecnologia</h5></a>
+              <ul class="social-icons d-flex justify-content-center">
+                    <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                    <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                    <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cardnoticias p-0">
+            <div class="cardnoticias-image"> <img src="https://images.unsplash.com/photo-1625806786037-2af608423424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""> </div>
+              <div class="cardnoticias-content d-flex flex-column align-items-center">
+                <h4 class="pt-2">Senadora norte-americana pede que CEO do Facebook retenha documentos relacionados a depoimento</h4>
+                <a href="https://news.bitcoin.com/5-countries-accept-bitcoin-legal-tender-end-of-next-year-bitmex-ceo/" style="color: white;"><h5>Cripto</h5></a>
+                <ul class="social-icons d-flex justify-content-center">
+                      <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                      <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                      <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  </div>
+</div></br>
+
 
 
 <br>
-<h3>Recentes</h3>
+<h3>Posts Recentes</h3>
 
 <!--------   Card Home   ---------->
 
