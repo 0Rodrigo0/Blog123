@@ -1,24 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="/static/MeuBlog/css/cardshome.css">  
-<!--------      Favicon     --------->
-  
-</head>
 
-  
 
 {% extends 'base.html' %}
 
 {% block content %}
 
+<h3>Noticas</h3>
+<hr>
+
+
+<div class="containercn">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="cardnoticias p-0">
+        <div class="cardnoticias-image"> <img src="https://img.r7.com/images/r7rio-042021-vacina-rio-13042021212435848?dimensions=299x417&&&&&&&&&&resize=299x417&crop=631x880+287+0" alt=""> </div>
+          <div class="cardnoticias-content d-flex flex-column align-items-center">
+            <h4 class="pt-2">Brasil tem a menor taxa de transmissão do coronavírus desde abril de 2020</h4>
+            <h5>Saúde</h5>
+            <ul class="social-icons d-flex justify-content-center">
+                  <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                  <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                  <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 
 <br>
 <h3>Recentes</h3>
 
-
 <!--------   Card Home   ---------->
+
 <hr>
 <div class='wrapper'>
     {% for post in object_list %}
@@ -63,6 +77,5 @@
     {% endfor%}
 </div>
 <hr>
-
 
 {% endblock %}
