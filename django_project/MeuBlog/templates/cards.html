@@ -22,8 +22,12 @@
         <a href="{% url 'category' post.category|slugify %}" class="btn btn-primary">{{ post.category }}</a><br></br>
         <div class="card-footer">
             <small class="text-muted">
-            <a href="{% url 'show_proflie_page' post.author.profile.id %}" style="text-decoration:none; font-family: Arial; color: grey;">{{ post.author.first_name }} {{ post.author.last_name }}</a>
-            <a style="text-decoration:none; font-family: Arial; color: grey;"> - {{ post.post_date }}</a>
+                {% if show_proflie_page %}
+                    <a href="{% url 'show_proflie_page' post.author.profile.id %}" style="text-decoration:none; font-family: Arial; color: grey;">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                {% else %}
+                    <a href="{% url 'create_profile_page' %}" style="text-decoration:none; font-family: Arial; color: grey;">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                {% endif %}
+                    <a style="text-decoration:none; font-family: Arial; color: grey;"> - {{ post.post_date }}</a>
             </small>
         </div>
     </div>
