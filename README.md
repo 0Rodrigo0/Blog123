@@ -2,7 +2,8 @@
 
 Blog desenvolvido como pratica em Pyrhon. 
 
-![image](https://user-images.githubusercontent.com/87920248/150441896-093923a8-afbb-4c97-a235-aa6a55862db9.png)
+![image](https://user-images.githubusercontent.com/87920248/150442304-30cc67af-5496-4387-b0be-d400c41b855b.png)
+
 
 ## Tecnologias
 
