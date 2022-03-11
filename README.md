@@ -13,9 +13,12 @@ O detalhe é que como a conta é gratuita as modificações não permanecem por 
 O WhatsApp funciona e o rodapé tem informações de contato.
 
 
-# Contatos:
-WhatsApp: 51 984065069 |
-E-mail: rodrigobl1@yahoo.com.br |
+## Contatos:
+
+WhatsApp: 51 984065069.
+
+E-mail: rodrigobl1@yahoo.com.br.
+
 Linkedin: https://www.linkedin.com/in/rodrigo-blw/
 
 °•._______{°-°}________.•°
