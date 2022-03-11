@@ -14,8 +14,8 @@ O WhatsApp funciona e o rodapé tem informações de contato.
 
 
 # Contatos:
-WhatsApp: 51 984065069
-E-mail: rodrigobl1@yahoo.com.br
+WhatsApp: 51 984065069 |
+E-mail: rodrigobl1@yahoo.com.br |
 Linkedin: https://www.linkedin.com/in/rodrigo-blw/
 
 °•._______{°-°}________.•°
