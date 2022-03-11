@@ -12,14 +12,10 @@ Utiliza Html, Python, Django e CSS. Foi realizado como pratica de estudo e modif
 O detalhe é que como a conta é gratuita as modificações não permanecem por muito tempo, ou seja, são apagadas em alguns minutos.
 O WhatsApp funciona e o rodapé tem informações de contato.
 
-## Contatos:
 
-WhatsApp: 51 984065069.
-
-E-mail: rodrigobl1@yahoo.com.br.
-
+# Contatos:
+WhatsApp: 51 984065069
+E-mail: rodrigobl1@yahoo.com.br
 Linkedin: https://www.linkedin.com/in/rodrigo-blw/
-
-Obrigado!
 
 °•._______{°-°}________.•°
